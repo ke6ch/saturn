@@ -10,13 +10,15 @@
       <td>District</td>
       <td>Population</td>
     </tr>
-    <?php foreach($city as $row){ ?>
-    <tr>
-        <?php foreach($row as $cel){ ?>
-            <td><?= $cel?></td>
-        <?php } ?>
-    </tr>
-    <?php } ?>
+    <?php foreach($city as $row) {
+      echo '<tr>';
+      echo '<td>'.htmlspecialchars($row['ID']).'</td>';
+      echo '<td>'.htmlspecialchars($row['Name']).'</td>';
+      echo '<td>'.htmlspecialchars($row['CountryCode']).'</td>';
+      echo '<td>'.htmlspecialchars($row['District']).'</td>';
+      echo '<td>'.htmlspecialchars($row['Population']).'</td>';
+      echo '</tr>';
+    }?>
     </table>
   </body>
 </html>

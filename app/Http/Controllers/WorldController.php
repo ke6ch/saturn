@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
+use App;
 
 class WorldController extends Controller
 {
@@ -14,7 +15,12 @@ class WorldController extends Controller
      */
     public function index()
     {
-        $city = DB::select('select * from city');
+        $city = App\City::all();
+
+        // foreach ($city as $val) {
+        //     echo $val;
+        // }
+        // $city = DB::select('select * from city');
         return view('world', ['city' => $city]);
         // return view('world');
     }
