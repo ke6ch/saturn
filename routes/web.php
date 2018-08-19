@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('world', 'WorldController');
+Route::resource('elastic', 'ElasticController');
